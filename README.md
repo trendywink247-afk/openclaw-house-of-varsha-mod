@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # House of Varsha
 
 ## Project Overview
@@ -34,3 +35,7 @@
 ---
 
 *This README will grow as the project progresses.*
+=======
+# house-of-varsha
+House of Varsha - Premium Website
+>>>>>>> d66c19d5c15b21113bd576ee649b38b4d6faa4eb
