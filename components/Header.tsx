@@ -16,20 +16,20 @@ export default function Header() {
   return (
     <header className="bg-cream border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-serif font-bold text-gray-900 hover:text-taupe transition-colors">
+          <Link href="/" className="text-3xl font-serif font-extrabold text-taupe hover:text-dark-taupe transition-colors">
             House of Varsha
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-12">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-sans text-gray-600 hover:text-taupe transition-colors"
+                    className="font-sans text-taupe hover:text-dark-taupe transition-colors font-medium"
                   >
                     {link.label}
                   </Link>
@@ -40,7 +40,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-taupe focus:ring-opacity-50 hover:bg-cream text-taupe"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -58,13 +58,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-100">
-            <ul className="space-y-4">
+          <nav className="md:hidden bg-cream border-t border-gray-200 animate-slideDown py-6 px-6">
+            <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block font-sans text-gray-600 hover:text-taupe transition-colors"
+                    className="block font-sans text-taupe hover:text-dark-taupe transition-colors font-semibold text-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}

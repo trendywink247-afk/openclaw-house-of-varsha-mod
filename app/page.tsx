@@ -26,6 +26,34 @@ export default function Home() {
               Explore Collection
             </Link>
           </div>
+
+          {/* Featured Products Section */}
+          <section className="mt-20">
+            <h2 className="text-4xl font-serif text-gray-900 mb-10 text-center">Featured Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredProducts.map(product => (
+                <Link
+                  href={`/shop/${product.id}`}
+                  key={product.id}
+                  className="group bg-cream rounded-xl shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-2xl font-serif font-semibold text-dark-taupe mb-2 group-hover:text-taupe transition-colors">
+                      {product.name}
+                    </h3>
+                    <p className="font-sans text-taupe text-base">
+                      {product.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
