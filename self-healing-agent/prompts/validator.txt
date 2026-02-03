@@ -1,0 +1,3 @@
+Validate the result.
+Check for errors, broken logic, or incomplete outcomes.
+Return either SUCCESS or a concise FAILURE reason.
